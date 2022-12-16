@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+// Include the namespace required to use Unity UI and Input System
 using UnityEngine.InputSystem;
 using TMPro;
 
@@ -75,4 +77,5 @@ public class PlayerController : MonoBehaviour
         }
     }
 }
+
 
