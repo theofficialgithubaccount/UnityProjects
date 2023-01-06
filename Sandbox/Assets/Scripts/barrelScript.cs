@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class barrelScript : MonoBehaviour
 {
@@ -25,6 +26,19 @@ public class barrelScript : MonoBehaviour
         {
             m_gallons = 0;
         }
+    }
+
+    void OnMove(InputValue movementValue)
+    {
+        Vector2 movementVector = movementValue.Get<Vector2>();
+
+        Debug.Log(movementVector.x + "," + movementVector.y);
+
+        if (movementVector.y == 1)
+            fill((int)(m_size * 0.1));
+
+        if (movementVector.y == -1)
+            drain((int)(m_size * 0.1));
     }
     // Start is called before the first frame update
     void Start()
