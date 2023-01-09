@@ -7,6 +7,9 @@ public class barrelScript : MonoBehaviour
 {
     public int m_gallons;
     public int m_size;
+    public GameObject Player;
+    //public PlayerController playercontroller;
+
 
     public void fill(int gallons)
     {
@@ -16,8 +19,9 @@ public class barrelScript : MonoBehaviour
         {
             m_gallons = m_size;
         }
+        gameObject.transform.localScale += new Vector3(0, 0, m_size);
     }
-
+      
     public void drain(int gallons)
     {
         m_gallons -= gallons;
@@ -26,6 +30,7 @@ public class barrelScript : MonoBehaviour
         {
             m_gallons = 0;
         }
+        gameObject.transform.localScale -= new Vector3(0, 0, m_size);
     }
 
     void OnMove(InputValue movementValue)
