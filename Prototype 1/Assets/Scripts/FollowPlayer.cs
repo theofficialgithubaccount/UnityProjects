@@ -32,7 +32,7 @@ public class FollowPlayer : MonoBehaviour
         else
         {
             //Change to third person perspective
-            offset = new Vector3(0, 5, -7);
+            offset = new Vector3(0, 12, -14.5f);
         }
 
         // Offset the camera's position from the player
